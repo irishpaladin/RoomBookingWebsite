@@ -1,0 +1,332 @@
+/*Login Form template is taken from ColorLib*/
+
+body {
+    /*Display & Size*/
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 10vw auto 4vw;
+    grid-gap: 0;
+    padding: 0;
+    background: #edf0f2;
+    box-shadow: 0px 0px 5px 0px rgba(56,128,135,1);
+
+    /*Font*/
+    font-family: 'Roboto Condensed';
+  }
+  
+  header,
+  footer {
+    grid-column: 1 / span 5;
+  }
+  
+  main {
+    grid-column: 1 / span 3;
+  }
+  
+  aside {
+    grid-column: span 2;
+  }
+  
+  @media (max-width: 700px) {
+    
+    main,
+    aside {
+      grid-column: 1 / span 5;
+    }
+    
+  }
+  
+  /* Demo Specific Styles */
+  body {
+    margin: 0 auto;
+    max-width: 56em;
+    padding: 0;
+    min-height: 100vh;
+  }
+  
+  header,
+  main,
+  aside,
+  footer {
+    display: relative;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header{
+    height: 10vw;
+    text-align: center;
+  }
+
+  .subtitle{
+    font-weight: lighter;
+    font-size: .9rem;
+    margin-top: 0;
+    letter-spacing: .2em;
+  }
+
+  .title{
+    font-weight:900;
+    font-size: 2.5rem;
+    margin-bottom:0;
+    letter-spacing: .02em;
+  }
+
+  main{
+    background-color: #F6f6f2;
+  }
+
+  aside{
+    background-color: #b8d5d5;
+  }
+  
+  footer {
+    height: 4vw;
+    text-align: center;
+  }
+
+  /*colors*/
+  
+  .blue-main-bg{
+    background-color:  #388087;
+  }
+
+  .white-font{
+    color: #F6f6f2;
+  }
+
+  .blue-secondary{
+    color: #388087;
+  }
+
+  /*Main tags*/
+
+  .circle{
+    border-radius: 50%;
+  }
+
+  .small-image{
+    width:1rem;
+    height: 1rem;
+  }
+
+  main{
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+  .content{
+    display: relative;
+    margin: 0;
+    width: auto;
+    height: 100%;
+    padding-bottom: 1.5rem;
+  }
+
+  .show-border{
+    border: 1px solid black;
+  }
+  
+  .booking-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "ROOM Date\/Time";
+    padding: 1em;
+    background-color:rgba(111, 179, 184,0.5);
+    margin-bottom: 1rem;
+  }
+  
+  .content-title{
+    font-size: 1.9em;
+    font-weight: lighter;
+  }
+
+  .room-title h2{
+    margin: 10px;
+    font-weight: lighter;
+  }
+
+
+   .booking-container{
+     border-top: 5px solid #badfe7;
+     padding-top: 1.2em;
+   }
+
+   .time-schedule table tr th{
+     font-weight: lighter;
+     letter-spacing: .1em;
+   }
+
+   .time{
+    padding-right: .9em;
+   }
+
+   .right-align-text{
+     text-align: right;
+   }
+
+   .left-align-text{
+     text-align: left;
+   }
+
+   .username{
+     padding-left: .2em;
+   }
+
+
+
+   .loginpanel{
+    padding-left :1rem;
+    padding-right: 1rem;
+}
+
+.loginpanel .content-title{
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+}
+
+.txt{
+    height: 2rem;
+    width: 100%;
+    background-color: #b8d5d5;
+    padding:0;
+    margin-bottom: .9rem;
+}
+
+.txt input{
+    height: 100%;
+    width: 100%;
+    padding:0;
+    border:0;
+    font-family: 'Roboto Condensed';
+    background: #F6f6f2;
+    padding: 1px;
+    padding-left: 8px;
+    box-sizing: border-box;
+}
+
+.txt .blue-button{
+    background: #388087;
+}
+
+.form-image{
+    height: 100%;
+    width: auto;
+}
+.form-image img{
+    height: 100%;
+    width: auto;
+}
+
+.login-container{
+    border-top: 5px solid rgba(56, 128, 135,0.5);
+    padding-top: 1.2em;
+  }
+
+  .body-signup {
+    /*Display & Size*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 10vw auto 4vw;
+    grid-gap: 0;
+    padding: 0;
+    background: #edf0f2;
+    box-shadow: 0px 0px 5px 0px rgba(56,128,135,1);
+
+    /*Font*/
+    font-family: 'Roboto Condensed';
+  }
+  
+  .body-signup header,
+  .body-signup footer {
+    grid-column: 1 / span 5;
+  }
+  
+  .body-signup main {
+    grid-column: 1 / span 5;
+    text-align: center;
+    
+  }
+  
+  .avatar-upload a img{
+      max-width: 50%;
+      height: auto;
+      margin-bottom: 10px;
+  }
+  .signuppanel{
+      width: 50%;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      display: inline-block;
+      background-color:rgba(111, 179, 184,0.5);
+  }
+  .signuppanel .content-title{
+      margin-bottom: 0;
+  }
+
+
+
+  .room-management {
+    /*Display & Size*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 10vw auto 4vw;
+    grid-gap: 0;
+    padding: 0;
+    background: #edf0f2;
+    box-shadow: 0px 0px 5px 0px rgba(56,128,135,1);
+
+    /*Font*/
+    font-family: 'Roboto Condensed';
+  }
+  
+  .body-signup header,
+  .body-signup footer {
+    grid-column: 1 / span 5;
+  }
+  
+  .body-signup main {
+    grid-column: 1 / span 5;
+    text-align: center;
+    
+  }
+
+  .small-button{
+      width: 150px;
+      float: right;
+  }
+
+  textarea.txt{
+      max-width: 100%;
+      min-height: 175px;
+      font-family: 'Roboto Condensed';
+        background: #F6f6f2;
+        padding: 8px;
+        box-sizing: border-box;
+  }
+
+  select.txt, input.date{
+    font-family: 'Roboto Condensed';
+    background: #F6f6f2;
+    padding: 8px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    height: fit-content;
+  }
+ 
+  .form-label{
+      float: left;
+  }
+
+  .medium-image{
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .circle-border{
+      border: 1px solid  rgb(56,128,135);
+  }
+  .table-link{
+      font-size: .7rem;
+      letter-spacing: normal;
+  }

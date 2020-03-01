@@ -1,0 +1,107 @@
+.body-signup {
+    /*Display & Size*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 10vw auto 4vw;
+    grid-gap: 0;
+    padding: 0;
+    background: #edf0f2;
+    box-shadow: 0px 0px 5px 0px rgba(56,128,135,1);
+
+    /*Font*/
+    font-family: 'Roboto Condensed';
+  }
+  
+  .body-signup header,
+  .body-signup footer {
+    grid-column: 1 / span 5;
+  }
+  
+  .body-signup main {
+    grid-column: 1 / span 5;
+    text-align: center;
+    
+  }
+  
+  .avatar-upload a img{
+      max-width: 50%;
+      height: auto;
+      margin-bottom: 10px;
+  }
+  .signuppanel{
+      width: 50%;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      display: inline-block;
+      background-color:rgba(111, 179, 184,0.5);
+  }
+  .signuppanel .content-title{
+      margin-bottom: 0;
+  }
+
+
+
+  .room-management {
+    /*Display & Size*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 10vw auto 4vw;
+    grid-gap: 0;
+    padding: 0;
+    background: #edf0f2;
+    box-shadow: 0px 0px 5px 0px rgba(56,128,135,1);
+
+    /*Font*/
+    font-family: 'Roboto Condensed';
+  }
+  
+  .body-signup header,
+  .body-signup footer {
+    grid-column: 1 / span 5;
+  }
+  
+  .body-signup main {
+    grid-column: 1 / span 5;
+    text-align: center;
+    
+  }
+
+  .small-button{
+      width: 150px;
+      float: right;
+  }
+
+  textarea.txt{
+      max-width: 100%;
+      min-height: 175px;
+      font-family: 'Roboto Condensed';
+        background: #F6f6f2;
+        padding: 8px;
+        box-sizing: border-box;
+  }
+
+  select.txt, input.date{
+    font-family: 'Roboto Condensed';
+    background: #F6f6f2;
+    padding: 8px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    height: fit-content;
+  }
+ 
+  .form-label{
+      float: left;
+  }
+
+  .medium-image{
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .circle-border{
+      border: 1px solid  rgb(56,128,135);
+  }
+  .table-link{
+      font-size: .7rem;
+      letter-spacing: normal;
+  }

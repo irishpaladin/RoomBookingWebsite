@@ -4,6 +4,7 @@
 	<title>Sign Up</title>
         <link href='https://fonts.googleapis.com/css?family=Roboto%20Condensed' rel='stylesheet'/>
         <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+        <script src="scripts/validate.js"> </script> 
     </head>
     <body class="body-signup">
         <header class='blue-main-bg' onclick="window.location.href = 'index.html';">
@@ -20,19 +21,23 @@
                         <a href=""><img src="images/anon.jpg" alt="UploadImage"/></a>
                     </div>
                     <div class="txt">
-                        <input id="user" class="blue-secondary" type="text" placeholder="Username" />
+                        <input id="username-signup" class="blue-secondary" type="text" placeholder="Username" />
+                        <p class = "error-message" id="username-signup-error"></p>
                     </div>
                     <div class="txt">
-                        <input id="email" class="blue-secondary" type="email" placeholder="Email" />
+                        <input id="email-signup" class="blue-secondary" type="email" placeholder="Email" />
+                        <p class = "error-message" id="email-signup-error"></p>
                     </div>
                     <div class="txt">
-                        <input id="pwd" class="blue-secondary" type="password" placeholder="Password" />
+                        <input id="password-signup" class="blue-secondary" type="password" placeholder="Password" />
+                        <p class = "error-message" id="password-signup-error"></p>
                     </div>
                     <div class="txt">
-                        <input id="pwd2" class="blue-secondary" type="password" placeholder="Confirm Password" />
+                        <input id="password2-signup" class="blue-secondary" type="password" placeholder="Confirm Password" />
+                        <p class = "error-message" id="password2-signup-error"></p>
                     </div>
                     <div class="buttons txt">
-                        <input type="button" class="blue-button white-font" value="Sign me up!" onclick="window.location.href = 'room-booking-management.html';" />
+                        <input type="button" class="blue-button white-font" value="Sign me up!" id="submit-signup" />
                     </div>
                     
                     
@@ -45,5 +50,7 @@
         <footer class="white-font blue-main-bg">
             <p>@All rights reserved</p>
         </footer>
+
+        <script src = "scripts/signup-r.js" ></script>
     </body>
 </html>

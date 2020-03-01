@@ -4,6 +4,7 @@
 	<title>Book a Room</title>
         <link href='https://fonts.googleapis.com/css?family=Roboto%20Condensed' rel='stylesheet'/>
         <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+        <script src="scripts/validate.js"> </script>  
     </head>
     <body class="body-signup">
         <header class='blue-main-bg' onclick="window.location.href = 'index.html';">
@@ -16,70 +17,74 @@
                 <h2 class = "blue-secondary content-title">Book a Room</h2>
                 <p class="blue-secondary"></p>
                 <div class="login-container">
-                    <div class="">
-                        <label class="form-label blue-secondary" for="room-number">Room Number
+                    <p hidden id="room-id">0</p>
+                    <div class="txt">
+                        <label class="form-label blue-secondary" for="room-number-booking">Room Number
                             <b class="" style="color:#FF0000">*</b>
                         </label>
-                        <select id="room-number" name="roomnumber" class="blue-secondary txt">
-                        <option value="Radio-0" selected>RIC 214</option>
-                        <option value="Radio-1">RIC 315</option>
-                        <option value="Radio-2">RIC 330</option>
+                        <select id="room-number-booking" name="roomnumber" class="blue-secondary">
+                            <option value="0" selected>RIC 214</option>
+                            <option value="1">RIC 315</option>
+                            <option value="2">RIC 330</option>
                         </select>
                     </div>
-                    <div class="">
-                        <label class="form-label blue-secondary" for="date">Date
+                    <div class="txt">
+                        <label class="form-label blue-secondary" for="date-booking">Date
                             <b class="" style="color:#FF0000">*</b>
                         </label>
-                        <input type="date" name="date" placeholder="MM/DD/YYYY" class="date txt blue-secondary" id="date" size="58" maxlength="10" datemax="" datemin="01/27/2020" value="01/27/2020" date="mm/dd/yy" />
+                        <input type="date" name="date" class="date blue-secondary" id="date-booking" size="58" value="2020-02-01" />
+                        <p class = "error-message" id="date-booking-error"></p>
                     </div>
-                    <div class="">
-                        <label class="form-label blue-secondary " for="start-time">Start Time
+                    <div class="txt">
+                        <label class="form-label blue-secondary " for="start-time-booking">Start Time
                             <b class="icon_required" style="color:#FF0000">*</b>
                         </label>
-                        <select id="start-time" name="start-time" class="blue-secondary txt">
-                        <option value="Radio-0" selected>8 AM</option>
-                        <option value="Radio-1">9 AM</option>
-                        <option value="Radio-2">10 AM</option>
-                        <option value="Radio-3">11 AM</option>
-                        <option value="Radio-4">12 PM</option>
-                        <option value="Radio-5">1 PM</option>
-                        <option value="Radio-6">2 PM</option>
-                        <option value="Radio-7">3 PM</option>
-                        <option value="Radio-8">4 PM</option>
-                        <option value="Radio-9">5 PM</option>
-                        <option value="Radio-10">6 PM</option>
-                        <option value="Radio-11">7 PM</option>
-                        <option value="Radio-12">8 PM</option>
+                        <select id="start-time-booking" name="start-time" class="blue-secondary">
+                            <option value="0" selected>8 AM</option>
+                            <option value="1">9 AM</option>
+                            <option value="2">10 AM</option>
+                            <option value="3">11 AM</option>
+                            <option value="4">12 PM</option>
+                            <option value="5">1 PM</option>
+                            <option value="6">2 PM</option>
+                            <option value="7">3 PM</option>
+                            <option value="8">4 PM</option>
+                            <option value="9">5 PM</option>
+                            <option value="10">6 PM</option>
+                            <option value="11">7 PM</option>
+                            <option value="12">8 PM</option>
                         </select>
-                        </div>
-                    <div class="">
-                        <label class="form-label blue-secondary" for="end-time">End end-time
+                    </div>
+                    <div class="txt">
+                        <label class="form-label blue-secondary" for="end-time-booking">End end-time
                             <b class="" style="color:#FF0000">*</b>
                         </label>
-                        <select id="end-time" name="end-time" class="blue-secondary txt">
-                        <option value="Radio-0" selected>8 AM</option>
-                        <option value="Radio-1">9 AM</option>
-                        <option value="Radio-2">10 AM</option>
-                        <option value="Radio-3">11 AM</option>
-                        <option value="Radio-4">12 PM</option>
-                        <option value="Radio-5">1 PM</option>
-                        <option value="Radio-6">2 PM</option>
-                        <option value="Radio-7">3 PM</option>
-                        <option value="Radio-8">4 PM</option>
-                        <option value="Radio-9">5 PM</option>
-                        <option value="Radio-10">6 PM</option>
-                        <option value="Radio-11">7 PM</option>
-                        <option value="Radio-12">8 PM</option>
+                        <select id="end-time-booking" name="end-time" class="blue-secondary">
+                            <option value="0">8 AM</option>
+                            <option value="1" selected >9 AM</option>
+                            <option value="2">10 AM</option>
+                            <option value="3">11 AM</option>
+                            <option value="4">12 PM</option>
+                            <option value="5">1 PM</option>
+                            <option value="6">2 PM</option>
+                            <option value="7">3 PM</option>
+                            <option value="8">4 PM</option>
+                            <option value="9">5 PM</option>
+                            <option value="10">6 PM</option>
+                            <option value="11">7 PM</option>
+                            <option value="12">8 PM</option>
                         </select>
+                        <p class = "error-message" id="end-time-booking-error"></p>
                     </div>
-
-                    <label class="form-label blue-secondary" for="description">Description</label>
-                    <textarea name="description" class="blue-secondary txt" id="description" rows="7" cols="58"></textarea>
+                    <div class = "txt">
+                        <label class="form-label blue-secondary" for="description-booking">Description</label>
+                        <textarea name="description" class="blue-secondary " id="description-booking" rows="7" cols="58" placeholder="Description of the event..."></textarea>
+                        <p class = "character-counter-message">0/50</p>
+                        <p class = "error-message" id="description-booking-error"></p>
+                    </div>
                     <div class="buttons txt">
-                        <input type="button" class="blue-button white-font" value="Save Booking" onclick="window.location.href = 'room-booking-management.html';" />
-                    </div>
-                    
-                    
+                        <input type="button" class="blue-button white-font" value="Save Booking" id = "submit-booking"/>
+                    </div>    
                 </div>
               </div>
               
@@ -89,5 +94,6 @@
         <footer class="white-font blue-main-bg">
             <p>@All rights reserved</p>
         </footer>
+        <script src = "scripts/addbooking-r.js" ></script>
     </body>
 </html>

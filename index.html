@@ -4,6 +4,7 @@
 	<title>Home</title>
         <link href='https://fonts.googleapis.com/css?family=Roboto%20Condensed' rel='stylesheet'/>
         <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+        <script src="scripts/validate.js"> </script>  
     </head>
     <body>
         <header class='blue-main-bg'>
@@ -13,7 +14,18 @@
 
         <main>
             <div class="content">
-                <h1 class = "blue-secondary content-title">Today's Booking</h1>
+                <div class="div-header">
+                    <table class="table-header"><tr>
+                        <td class="">
+                            <h1 class = "blue-secondary content-title">Today's Booking </h1>
+                        </td>
+                        <td class="">
+                            <div class="buttons txt small-button">
+                                <input type="button" class="blue-button white-font " value="Book a Room" onclick="window.location.href = 'book-room.html';" />
+                            </div>
+                        </td>
+                    </tr></table>
+                </div>
                 <div class="booking-container">
                     <div class="booking-info blue-secondary">
                         <div class="room-title "><h2>RIC 214</h2></div>
@@ -100,13 +112,16 @@
                 <h2 class = "blue-secondary content-title">Member Login</h2>
                 <div class="login-container">
                     <div class="txt">
-                        <input id="user" class="blue-secondary" type="text" placeholder="Username" />
+                        <input id="email-login" class="blue-secondary" type="text" placeholder="Email" />
+                        <p class = "error-message" id="email-login-error"></p>
                     </div>
+                    
                     <div class="txt">
-                        <input id="pwd" class="blue-secondary" type="password" placeholder="Password" />
+                        <input id="password-login" class="blue-secondary" type="password" placeholder="Password" />
+                        <p class = "error-message" id="password-login-error"></p>
                     </div>
                     <div class="buttons txt">
-                        <input type="button" class="blue-button white-font" value="Login" onclick="window.location.href = 'room-booking-management.html';"/>
+                        <input type="button" class="blue-button white-font" value="Login" id="submit-login"/>
                     </div>
                     
                     
@@ -126,5 +141,7 @@
         <footer class="white-font blue-main-bg">
             <p>@All rights reserved</p>
         </footer>
+
+        <script  src = "scripts/signin-r.js" ></script>
     </body>
 </html>

@@ -4,6 +4,7 @@
 	<title>Sign Up</title>
         <link href='https://fonts.googleapis.com/css?family=Roboto%20Condensed' rel='stylesheet'/>
         <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+        <script src = "scripts/validate.js" ></script>
     </head>
     <body class="body-signup">
         <header class='blue-main-bg' onclick="window.location.href = 'index.html';">
@@ -16,12 +17,16 @@
                 <h2 class = "blue-secondary content-title">Edit/Add Note</h2>
                 <p class="blue-secondary"></p>
                 <div class="login-container">
-                    <textarea class="blue-secondary txt" rows="4" cols="50"> Contains here the note to be edited/added.....</textarea>
-                    <div class="buttons txt">
-                        <input type="button" class="blue-button white-font" value="Save Note" onclick="window.location.href = 'room-booking-management.html';" />
+                    <p hidden id="booking-id">0</p>
+                    <div class = "txt">
+                        <textarea class="blue-secondary " id="edit-note" rows="10" cols="50" placeholder="Add note for the event....."></textarea>
+                        <p class = "character-counter-message">0/500</p>
+                        <p class = "error-message" id="password2-signup-error"></p>
                     </div>
-                    
-                    
+                    <div class="buttons txt">
+                        <input type="button" class="blue-button white-font" value="Save Note" id="submit-note" />
+                    </div>
+ 
                 </div>
               </div>
               
@@ -31,5 +36,6 @@
         <footer class="white-font blue-main-bg">
             <p>@All rights reserved</p>
         </footer>
+        <script src = "scripts/note-r.js" ></script>
     </body>
 </html>
